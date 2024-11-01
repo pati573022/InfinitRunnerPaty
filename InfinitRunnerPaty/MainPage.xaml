@@ -6,7 +6,9 @@
    
   <Grid>
     <Image Source="fundo1.png"/>
-    <Image Source="fundo2.png"/>
+    <Image Source="fundo2.jpg"/>
+    <Image Source="fundo3.jpg"/>
+    <Image Source="chao.jpg"/>
     </Grid>
 
 </ContentPage>
