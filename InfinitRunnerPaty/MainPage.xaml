@@ -6,40 +6,40 @@
 
        <Grid>
               <HorizontalStackLayout x:Name="HSLayer1">
-                     <Image Source="fundo1.jpg"
+                     <Image Source="fundo1.png"
                             VerticalOptions="Fill"
-                            Aspect="AspectFill"/>
-                     <Image Source="fundo1.jpg"
+                            Aspect="Fill"/>
+                     <Image Source="fundo1.png"
                             VerticalOptions="Fill"
-                            Aspect="AspectFill"/>
-                     <Image Source="fundo1.jpg"
+                            Aspect="Fill"/>
+                     <Image Source="fundo1.png"
                             VerticalOptions="Fill"
-                            Aspect="AspectFill"/>
+                            Aspect="Fill"/>
               </HorizontalStackLayout>
               <HorizontalStackLayout x:Name="HSLayer2">
                      <Image Source="fundo2.jpg"
                             VerticalOptions="Fill"
-                            Aspect="AspectFill"/>
+                            Aspect="Fill"/>
                      <Image Source="fundo2.jpg"
                             VerticalOptions="Fill"
-                            Aspect="AspectFill"/>
+                            Aspect="Fill"/>
                      <Image Source="fundo2.jpg"
                             VerticalOptions="Fill"
-                            Aspect="AspectFill"/>
+                            Aspect="Fill"/>
               </HorizontalStackLayout>
               <HorizontalStackLayout x:Name="HSLayer3">
                      <Image Source="fundo3.png"
                             VerticalOptions="Fill"
-                            Aspect="AspectFill"/>
+                            Aspect="Fill"/>
                      <Image Source="fundo3.png"
                             VerticalOptions="Fill"
-                            Aspect="AspectFill"/>
+                            Aspect="Fill"/>
                      <Image Source="fundo3.png"
                             VerticalOptions="Fill"
-                            Aspect="AspectFill"/>
+                            Aspect="Fill"/>
               </HorizontalStackLayout>
               <HorizontalStackLayout x:Name="HSLayerChao"
-                                      VerticalOptions="End">
+                                     VerticalOptions="End">
                      <Image Source="chao.jpg"
                             HeightRequest="130"
                             VerticalOptions="End"
