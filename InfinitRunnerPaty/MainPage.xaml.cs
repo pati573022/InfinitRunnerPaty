@@ -11,10 +11,13 @@ public partial class MainPage : ContentPage
 	int velocidade = 0;
 	int larguraJanela = 0;
 	int alturaJanela = 0;
+	
 
 	public MainPage()
 	{
 		InitializeComponent();
+		player=new Player (imgplayer)
+		player.Run();
 	}
 
 
@@ -81,6 +84,7 @@ public partial class MainPage : ContentPage
 		{
 			GerenciaCenarios();
 			await Task.Delay(tempoEntreFrames);
+			Player.Desenha();
 		}
 	}
 	protected override void OnAppearing()

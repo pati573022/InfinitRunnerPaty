@@ -1,69 +1,68 @@
 namespace InfinitRunnerPaty;
-{
-
 public class Animacao
-	{
-		protected List<String> Animacao1 = new List<String>();
-		protected List<String> Animacao2 = new List<String>();
-		protected List<String> Animacao3 = new List<String>();
-		protected bool loop = true;
-		protected int AnimacaoAtiva = 1;
-		bool Parado = true;
-		int FrameAtual = 1;
-		protected Image compImage;
-	}
-	public Animacao (Image a)
-	{
-		compImage = a;
-	}
-	public void Desenha ()
-	{
-		if (Parado)
-		return;
-		string NomeArquivo = "";
-        int TamanhoAnimacao = 0;
-        if (AnimacaoAtiva == 1)
+{
+    protected List<String> animacao1 = new List<String>();
+    protected List<String> animacao2 = new List<String>();
+    protected List<String> animacao3 = new List<String>();
+    protected bool loop = true;
+    protected int animacaoAtiva = 1;
+    bool parado = true;
+    int frameAtual = 1;
+    protected Image compImage;
+
+    public Animacao (Image a)
+    {
+        compImage = a;
+    }
+    public void Stop()
+    {
+        parado = true;
+    }
+    public void Play()
+    {
+        parado = false;
+    }
+    public void SetAnimacaoAtiva (int a)
+    {
+        animacaoAtiva = a;
+    }
+    public void Desenha()
+    {
+        if(parado)
+           return;
+        String nomeArquivo="";
+        int tamanhoAnimacao=0;
+        if (animacaoAtiva == 1)
         {
-            NomeArquivo = Animacao1[FrameAtual];
-            TamanhoAnimacao = Animacao2.Count;
+            nomeArquivo = animacao1 [frameAtual];
+            tamanhoAnimacao = animacao1.Count;
+        }   
+        else if (animacaoAtiva == 2)
+        {
+            nomeArquivo = animacao2 [frameAtual];
+            tamanhoAnimacao = animacao2.Count;
         }
-        else if (AnimacaoAtiva == 2)
+        else if (animacaoAtiva == 3)
         {
-            NomeArquivo = Animacao2[FrameAtual];
-            TamanhoAnimacao = Animacao2.Count;
+            nomeArquivo = animacao3 [frameAtual];
+            tamanhoAnimacao = animacao3.Count;
         }
-        else if (AnimacaoAtiva == 3)
+        compImage.Source = ImageSource.FromFile(nomeArquivo);
+        frameAtual++;
+        if (frameAtual >=tamanhoAnimacao)
         {
-            NomeArquivo = Animacao3[FrameAtual];
-            TamanhoAnimacao = Animacao3.Count;
-        }
-        compImage.Source = ImageSource.FromFile(NomeArquivo);
-        FrameAtual++;
-        if (FrameAtual >= TamanhoAnimacao)
-        {
-            if (loop)
-            FrameAtual = 0;
+            if(loop)
+              frameAtual = 0;
             else
             {
-                Parado = true;
+                parado = true;
                 QuandoParar();
-            }
+            }  
         }
     }
-        public virtual void QuandoParar()
-        {
 
-        }
-        public void Stop()
-        {
-            Parado = true;
-        }
-        public void Play()
-        {
-            Parado = false;
-        }
-        public void SetAnimacaoAtiva(int a)
-        {
-            AnimacaoAtiva = a;
-        }
-	}
+    public virtual void QuandoParar()
+    {
+        
+    }
+}
