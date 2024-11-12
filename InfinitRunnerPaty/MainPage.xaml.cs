@@ -2,6 +2,7 @@
 
 public partial class MainPage : ContentPage
 {
+	Player player;
 	bool estaMorto = false;
 	bool estaPulando = false;
 	const int tempoEntreFrames = 25;
@@ -16,7 +17,7 @@ public partial class MainPage : ContentPage
 	public MainPage()
 	{
 		InitializeComponent();
-		player=new Player (imgplayer)
+		player=new Player (imgPlayer);
 		player.Run();
 	}
 
@@ -84,7 +85,7 @@ public partial class MainPage : ContentPage
 		{
 			GerenciaCenarios();
 			await Task.Delay(tempoEntreFrames);
-			Player.Desenha();
+			player.Desenha();
 		}
 	}
 	protected override void OnAppearing()

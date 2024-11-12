@@ -1,3 +1,5 @@
+using FFImageLoading.Maui;
+
 namespace InfinitRunnerPaty;
 public class Animacao
 {
@@ -8,9 +10,9 @@ public class Animacao
     protected int animacaoAtiva = 1;
     bool parado = true;
     int frameAtual = 1;
-    protected Image compImage;
+    protected CachedImageView compImage;
 
-    public Animacao (Image a)
+    public Animacao (CachedImageView a)
     {
         compImage = a;
     }
