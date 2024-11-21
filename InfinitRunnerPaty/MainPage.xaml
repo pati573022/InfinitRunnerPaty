@@ -6,6 +6,10 @@
              Shell.NavBarIsVisible="False">
 
        <Grid>
+         <Grid.GestureRecognizers>
+                         <TapGestureRecognizer Tapped="OnGridTapped"/>
+       </Grid.GestureRecognizers>
+
               <HorizontalStackLayout x:Name="HSLayer1">
                      <Image Source="fundo1.png"
                             VerticalOptions="Fill"
