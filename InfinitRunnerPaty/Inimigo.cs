@@ -2,23 +2,21 @@ namespace InfinitRunnerPaty;
 
 public class Inimigo
 {
-    Image imageView;
+    Image ImageView;
     public Inimigo (Image a)
     {
-        imageView=a;
+        ImageView = a;
     }
     public void MoveX (double s)
     {
-        imageView.TranslationX -=s;
+        ImageView.TranslationX -=s;
     }
     public double GetX()
     {
-        return imageView.TranslationX;
+        return ImageView.TranslationX;
     }
-    public void Reset ()
+    public void Reset()
     {
-        imageView.TranslationX = 500;
+        ImageView.TranslationX=500;
     }
-
-
 }
